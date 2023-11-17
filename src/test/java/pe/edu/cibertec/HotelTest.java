@@ -44,7 +44,7 @@ public class HotelTest {
     @Test
     public void pruebaNombreClienteCaracteresInvalidos() {
         Hotel hotel = new Hotel();
-        String resultado = hotel.registrarReserva("101", "Juan123", "22/12/2023");
+        String resultado = hotel.registrarReserva("101", "@@#%", "22/12/2023");
         assertEquals("Recuerde que el nombre del cliente debe contener al menos 4 caracteres y contener caracteres alfabéticos.", resultado);
     }
 
