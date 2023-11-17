@@ -70,6 +70,17 @@ public class Hotel {
         if(invalid)
             return "Ingrese una fecha superior a la actual.";
 
+        this.piso = piso;
+        this.habitacion = Integer.parseInt(numberoHabitacion.substring(1, 3));
+        this.nombreCliente = nombreCliente;
+        this.fechaReserva = fecha;
+
+        System.out.println(
+                "Resúmen de reserva: \n" +
+                        "Nombre del cliente: " + this.nombreCliente + "\n" +
+                        "Habitación: " + String.valueOf(this.piso) + String.valueOf(this.habitacion) + "\n" +
+                        "Fecha de reserva: " + this.fechaReserva);
+
         return "El registro ha sido exitoso.";
     }
 }
