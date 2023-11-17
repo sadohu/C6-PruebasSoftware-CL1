@@ -81,9 +81,9 @@ public class Hotel {
 
         System.out.println(
                 "Resúmen de reserva: \n" +
-                        "Nombre del cliente: " + this.nombreCliente + "\n" +
-                        "Habitación: " + String.valueOf(this.piso) + String.valueOf(this.habitacion) + "\n" +
-                        "Fecha de reserva: " + this.fechaReserva);
+                "Nombre del cliente: " + this.nombreCliente + "\n" +
+                "Habitación: " + (this.piso) + String.format("%02d", this.habitacion) + "\n" +
+                "Fecha de reserva: " + this.fechaReserva);
 
         return "El registro ha sido exitoso.";
     }

@@ -9,7 +9,7 @@ public class HotelTest {
     @Test
     public void pruebaRegistroExitoso() {
         Hotel hotel = new Hotel();
-        String resultado = hotel.registrarReserva("101", "Juan Pérez", "22/12/2023");
+        String resultado = hotel.registrarReserva("109", "Juan Pérez", "22/12/2023");
         assertEquals("El registro ha sido exitoso.", resultado);
     }
 
@@ -23,14 +23,14 @@ public class HotelTest {
     @Test
     public void pruebaNumeroHabitacionInvalido() {
         Hotel hotel = new Hotel();
-        String resultado = hotel.registrarReserva("A01", "Juan Pérez", "22/12/2023");
+        String resultado = hotel.registrarReserva("A#1", "Juan Pérez", "22/12/2023");
         assertEquals("Ingrese una habitación válida (Números enteros y máximo tres caracteres).", resultado);
     }
 
     @Test
     public void pruebaNumeroPisoInvalido() {
         Hotel hotel = new Hotel();
-        String resultado = hotel.registrarReserva("401", "Juan Pérez", "22/12/2023");
+        String resultado = hotel.registrarReserva("901", "Juan Pérez", "22/12/2023");
         assertEquals("Ingrese un número de piso válido, del 1 al 3.", resultado);
     }
 
@@ -51,7 +51,7 @@ public class HotelTest {
     @Test
     public void pruebaEspaciosNombreCliente() {
         Hotel hotel = new Hotel();
-        String resultado = hotel.registrarReserva("101", "   J   P   ", "22/12/2023");
+        String resultado = hotel.registrarReserva("101", "   h                u   ", "22/12/2023");
         assertEquals("Recuerde que el nombre del cliente debe contener al menos 4 caracteres.", resultado);
     }
 
