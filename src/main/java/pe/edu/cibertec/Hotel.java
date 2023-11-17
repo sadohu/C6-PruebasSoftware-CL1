@@ -39,7 +39,7 @@ public class Hotel {
             return "Ingrese un número de piso válido, del 1 al 3.";
 
 
-        // CASO 1: Asegurar eliminación de los espacios excesivos
+        // Asegurar eliminación de los espacios excesivos
         nombreCliente = nombreCliente.trim();
         nombreCliente = nombreCliente.replaceAll("\\s+", " ");
 
@@ -48,13 +48,8 @@ public class Hotel {
         if(invalid)
             return "Recuerde que el nombre del cliente debe contener al menos 4 caracteres.";
 
-        // CASO 2: Controlar los espacios mediante una advertencia al usuario.
-        /*
-            invalid = !nombre.matches("[a-zA-Zá-úÁ-Ú]+(\\s[a-zA-Zá-úÁ-Ú]+)*");
-            assertTrue(valid, "Recuerde que el nombre del cliente debe contener al menos 4 caracteres y contener caracteres alfabéticos.\nPor último, sólo se admiten un espacio entre nombres.");
-        */
-
-        invalid = !nombreCliente.matches("[a-zA-Zá-úÁ-Ú ]+");
+//        invalid = !nombreCliente.matches("[a-zA-Zá-úÁ-ÚñÑ\\d'’çÇÆæ`´~\\- ]+");
+        invalid = !nombreCliente.matches(".*[a-zA-Zá-úÁ-ÚñÑ\\d ]+");
         if(invalid)
             return "Recuerde que el nombre del cliente debe contener al menos 4 caracteres y contener caracteres alfabéticos.";
 
