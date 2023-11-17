@@ -14,6 +14,13 @@ public class HotelTest {
     }
 
     @Test
+    public void pruebaDatosRequeridos(){
+        Hotel hotel = new Hotel();
+        String resultado = hotel.registrarReserva(" ", "", "");
+        assertEquals("Debe ingresar los datos requeridos.", resultado);
+    }
+
+    @Test
     public void pruebaNumeroHabitacionInvalido() {
         Hotel hotel = new Hotel();
         String resultado = hotel.registrarReserva("A01", "Juan Pérez", "22/12/2023");

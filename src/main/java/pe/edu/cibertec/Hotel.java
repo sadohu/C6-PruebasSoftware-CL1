@@ -23,6 +23,10 @@ public class Hotel {
     public String registrarReserva(String numberoHabitacion, String nombreCliente, String fechaReserva){
         boolean invalid;
 
+        // Datos requeridos
+        if(numberoHabitacion.trim().isBlank() || nombreCliente.trim().isBlank() || fechaReserva.trim().isBlank())
+            return "Debe ingresar los datos requeridos.";
+
         // Validación de números
         invalid = !numberoHabitacion.matches("[\\d+]{3}");
         if(invalid)
