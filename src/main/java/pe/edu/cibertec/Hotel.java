@@ -56,7 +56,7 @@ public class Hotel {
 
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate fecha = LocalDate.of(1, 1 ,1);
+        LocalDate fecha;
 
         // Controlar si se ingresa una fecha válida
         try {
@@ -69,13 +69,6 @@ public class Hotel {
         invalid = !fecha.isAfter(systemDate);
         if(invalid)
             return "Ingrese una fecha superior a la actual.";
-
-
-        System.out.println(
-            "Resúmen de reserva: \n" +
-            "Nombre del cliente: " + this.nombreCliente + "\n" +
-            "Habitación: " + String.valueOf(this.piso) + String.valueOf(this.habitacion) + "\n" +
-            "Fecha de reserva: " + this.fechaReserva);
 
         return "El registro ha sido exitoso.";
     }
