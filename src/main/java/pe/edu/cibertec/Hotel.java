@@ -49,7 +49,7 @@ public class Hotel {
             return "Recuerde que el nombre del cliente debe contener al menos 4 caracteres.";
 
 //        invalid = !nombreCliente.matches("[a-zA-Zá-úÁ-ÚñÑ\\d'’çÇÆæ`´~\\- ]+");
-        invalid = !nombreCliente.matches(".*[a-zA-Zá-úÁ-ÚñÑ\\d ]+");
+        invalid = !nombreCliente.matches("[a-zA-Zá-úÁ-ÚñÑ ]+");
         if(invalid)
             return "Recuerde que el nombre del cliente debe contener al menos 4 caracteres y contener caracteres alfabéticos.";
 

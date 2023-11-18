@@ -35,6 +35,13 @@ public class HotelTest {
     }
 
     @Test
+    public void pruebaEspaciosNombreCliente() {
+        Hotel hotel = new Hotel();
+        String resultado = hotel.registrarReserva("101", "   h                u   ", "22/12/2023");
+        assertEquals("Recuerde que el nombre del cliente debe contener al menos 4 caracteres.", resultado);
+    }
+
+    @Test
     public void pruebaNombreClienteInvalido() {
         Hotel hotel = new Hotel();
         String resultado = hotel.registrarReserva("101", "J1", "22/12/2023");
@@ -46,13 +53,6 @@ public class HotelTest {
         Hotel hotel = new Hotel();
         String resultado = hotel.registrarReserva("101", "@@#%", "22/12/2023");
         assertEquals("Recuerde que el nombre del cliente debe contener al menos 4 caracteres y contener caracteres alfabéticos.", resultado);
-    }
-
-    @Test
-    public void pruebaEspaciosNombreCliente() {
-        Hotel hotel = new Hotel();
-        String resultado = hotel.registrarReserva("101", "   h                u   ", "22/12/2023");
-        assertEquals("Recuerde que el nombre del cliente debe contener al menos 4 caracteres.", resultado);
     }
 
     @Test
