@@ -9,7 +9,7 @@ public class HotelTest {
     @Test
     public void pruebaRegistroExitoso() {
         Hotel hotel = new Hotel();
-        String resultado = hotel.registrarReserva("109", "Françis Lostanaus H2O", "22/12/2023");
+        String resultado = hotel.registrarReserva("109", "Francis Lostanau", "22/12/2023");
         assertEquals("El registro ha sido exitoso.", resultado);
     }
 
